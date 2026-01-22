@@ -1,0 +1,67 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "web-template",
+        "branding-kit",
+        "social-media",
+        "design-template",
+        "marketing-tool",
+        "content-pack"
+      ],
+      "description": "Product category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product preview image"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of features"
+    },
+    "demo_url": {
+      "type": "string",
+      "description": "Live demo URL"
+    },
+    "download_url": {
+      "type": "string",
+      "description": "Download URL after purchase"
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    },
+    "sales_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "category",
+    "price"
+  ]
+}

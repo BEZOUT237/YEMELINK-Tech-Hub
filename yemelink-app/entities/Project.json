@@ -1,0 +1,54 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "web",
+        "mobile",
+        "design",
+        "marketing",
+        "content"
+      ],
+      "description": "Project category"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Project thumbnail"
+    },
+    "live_url": {
+      "type": "string",
+      "description": "Live project URL"
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Technologies used"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "description"
+  ]
+}
